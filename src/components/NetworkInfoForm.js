@@ -25,19 +25,13 @@ const getSchema = (availableNetworks) => ({
 			type: 'string',
 			default: '',
 		},
-		email: {
-			title: 'מייל',
-			type: 'string',
-			default: '',
-		},
 	},
 	required: ['ssid'],
-	required: ['email'],
 });
 
 const getUiSchema = (isEnterprise) => ({
 	ssid: {
-		'ui:placeholder': 'Select SSID',
+		'ui:placeholder': 'בחר רשת',
 		'ui:options': {
 			emphasized: true,
 		},
@@ -50,11 +44,6 @@ const getUiSchema = (isEnterprise) => ({
 	},
 	passphrase: {
 		'ui:widget': 'password',
-		'ui:options': {
-			emphasized: true,
-		},
-	},
-	email: {
 		'ui:options': {
 			emphasized: true,
 		},
